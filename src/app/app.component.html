@@ -24,7 +24,10 @@
         <h2>Director:{{movieData.Director}}</h2>
       </div>
     </div>
-    <div>
+
+    <div *ngFor="let rating of movieData.Ratings">
+      <p>{{rating.Source}} - {{rating.Value}} </p>
+    </div>
 
     </div>
 </div>
