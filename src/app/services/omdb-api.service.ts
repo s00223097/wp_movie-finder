@@ -17,7 +17,7 @@ export class OmdbApiService {
   constructor(private _http:HttpClient) { }
 
   // Add getMoviedata method
-  getMovieData(movieName:string):Observable<IOMDBResponse> 
+  getMovieData(movieName:string):Observable<IOMDBResponse> // this method returs an observable
   {
     return this._http.get<IOMDBResponse>(this._siteURL+this._key + movieName)
     .pipe
