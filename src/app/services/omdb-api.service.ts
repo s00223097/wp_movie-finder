@@ -27,6 +27,8 @@ export class OmdbApiService {
       catchError(this.handleError) // handle error method below vv
     )
   }
+
+  // Handleerror method
   private handleError(err:HttpErrorResponse)
   {
     console.log('OmdbApiService:' + err.message);
