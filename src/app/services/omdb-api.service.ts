@@ -22,7 +22,7 @@ export class OmdbApiService {
     return this._http.get<IOMDBResponse>(this._siteURL+this._key + movieName)
     .pipe
     (
-      tap(data => console.log('Moviedata/error' + JSON.stringify(data))
+      tap((data: any) => console.log('Moviedata/error' + JSON.stringify(data))
       ),
       catchError(this.handleError) // handle error method below vv
     )

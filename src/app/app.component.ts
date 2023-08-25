@@ -16,7 +16,7 @@ export class AppComponent {
 
   getMovieDetails(movieName:string): boolean {
     this._omdbService.getMovieData(movieName).subscribe // subscribing to the returned observable: this will start the observable
-    ( movieData => {
+    ( (movieData: IOMDBResponse | undefined) => {
       this.movieData=movieData;
       console.log("Director name : " + this.movieData.Director);
     }
